@@ -1,0 +1,19 @@
+# Запуск всей системы одной командой:  docker compose up -d --build
+services:
+  bot:
+    build: .
+    container_name: max-bot
+    restart: unless-stopped      
+    env_file: .env               
+    environment:
+      ADMIN_HOST: "0.0.0.0"
+      ADMIN_PORT: "8080"
+      
+    
+      GIGACHAT_CA_BUNDLE_FILE: "/certs/russian_trusted_root_ca.cer"
+    ports:
+      - "127.0.0.1:8080:8080"     
+    volumes:
+      - ./docs:/app/docs           
+      - ./data:/data              
+      - ./certs:/certs:ro        

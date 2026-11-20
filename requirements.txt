@@ -1,0 +1,7 @@
+maxapi
+openai>=1.0
+python-dotenv
+pypdf
+python-docx
+aiohttp
+gigachat

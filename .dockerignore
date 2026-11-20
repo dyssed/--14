@@ -1,0 +1,16 @@
+# Что НЕ попадает в образ
+.env
+.env.*
+.venv
+__pycache__
+*.pyc
+.git
+.vscode
+qa_reports
+data
+certs
+qa.json
+unknown.json
+settings.json
+*.zip
+README.md
